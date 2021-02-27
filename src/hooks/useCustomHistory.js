@@ -1,5 +1,5 @@
 import { useHistory } from 'react-router-dom';
-import { listRouteByKey } from 'config/configureRoute';
+import { listRouteByKey } from 'configs/configureRoute';
 
 export default function useCustomHistory() {
   const history = useHistory();

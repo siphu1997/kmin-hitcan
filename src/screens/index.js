@@ -1,5 +1,5 @@
 import React, { lazy, useEffect, useState } from 'react';
-import routes from 'config/configureRoute';
+import routes from 'configs/configureRoute';
 import { Route, Switch } from 'react-router-dom';
 import RouteWithSubRoutes from 'components/RouteWithSubRoutes';
 import LoadingBook from 'components/LoadingBook';

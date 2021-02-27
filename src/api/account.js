@@ -1,4 +1,4 @@
-import AxiosService from 'config/axiosService';
+import AxiosService from 'configs/axiosService';
 function fakeLogin() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {

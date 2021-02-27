@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Container, Typography, Grid, Box } from '@material-ui/core';
-import { listRouteByKey } from 'config/configureRoute';
+import { listRouteByKey } from 'configs/configureRoute';
 export default function NoMatch() {
   const history = useHistory();
   function backToHome(e) {
