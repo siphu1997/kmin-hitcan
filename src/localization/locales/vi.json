@@ -1,0 +1,12 @@
+{
+  "button": {
+    "custom": "Tùy chỉnh"
+  },
+  "homescreen":{
+    "goToLogin" : "Đến trang đăng nhập",
+    "go_to_home_screen" : "Go to homework screen"
+  },
+  "homeworkScreen" : {
+    "decription" : "Bài tập {id}"
+  }
+}

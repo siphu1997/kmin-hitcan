@@ -7,6 +7,7 @@ export default function AuthWrapper({ isAuth, ...rest }) {
   const userData = useSelector((state) => state.globalData.userInfo);
   const { goTo } = useCustomHistory();
   const location = useLocation();
+
   useEffect(() => {
     if (!userData.role && isAuth) {
       goTo('login');

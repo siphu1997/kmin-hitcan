@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import useCustomHistory from 'hooks/useCustomHistory';
 import { Box, Button } from '@material-ui/core';
-
+import { localize } from 'localization';
 function HomeScreen(props) {
   const { goTo } = useCustomHistory();
   return (
@@ -12,10 +12,10 @@ function HomeScreen(props) {
         color="primary"
         onClick={() => goTo('homework')}
       >
-        Go to homework screen
+        {localize('homescreen.go_to_home_screen')}
       </Button>
       <Button variant="contained" color="primary" onClick={() => goTo('login')}>
-        Go to login
+        {localize('homescreen.goToLogin')}
       </Button>
     </Box>
   );

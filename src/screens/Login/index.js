@@ -17,6 +17,7 @@ function LoginScreen(props) {
       role: 'admin',
     };
     dispatch(setUserInfo(data));
+    window.localStorage.setItem('isLogin', true);
   };
 
   return (
