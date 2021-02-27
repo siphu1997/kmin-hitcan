@@ -1,12 +1,12 @@
-import { createMuiTheme, responsiveFontSizes } from "@material-ui/core";
+import { createMuiTheme, responsiveFontSizes } from '@material-ui/core';
 
-const primary = "#1C523C";
-const secondary = "#EAE7A1";
+const primary = '#1C523C';
+const secondary = '#EAE7A1';
 
-const warning = "#E35847";
-const success = "#2DCF58";
-const info = "#5bc0de";
-const error = "#dc3545";
+const warning = '#E35847';
+const success = '#2DCF58';
+const info = '#5bc0de';
+const error = '#dc3545';
 
 const theme = {
   palette: {
@@ -31,6 +31,9 @@ const theme = {
   },
   shape: {
     borderRadius: 5,
+  },
+  background: {
+    main: '#040b1f',
   },
 };
 

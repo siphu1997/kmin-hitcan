@@ -8,8 +8,7 @@ const NoMatch = lazy(() => import('./NoMatch'));
 
 export default function App() {
   return (
-    <React.Suspense fallback={<LoadingBook />}>
-      <LoadingBook />
+    <React.Suspense fallback={<LoadingBook isFullScreen />}>
       <Switch>
         {routes.map((route, i) => (
           <RouteWithSubRoutes key={i} {...route} />

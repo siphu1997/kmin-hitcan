@@ -1,3 +1,13 @@
+.ctnLoading {
+  display: inline-block;
+}
+
+.ctnLoading.isFullScreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .loader {
   --background: linear-gradient(135deg, #23c4f8, #275efe);
   --shadow: rgba(39, 94, 254, 0.28);
@@ -5,10 +15,10 @@
   --page: rgba(255, 255, 255, 0.36);
   --page-fold: rgba(255, 255, 255, 0.52);
   --duration: 3s;
-  --w: 10;
-  --h: 10;
-  width: 200px;
-  height: 140px;
+  --w: 150px;
+  --h: calc(var(--w) / 1.42857143);
+  width: var(--w);
+  height: var(--h);
   position: relative;
 }
 .loader:before,
@@ -50,8 +60,8 @@
   --o: 0;
   --c: var(--page);
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: calc(var(--w) / 20);
+  left: calc(var(--h) / 14);
   transform-origin: 100% 50%;
   color: var(--c);
   opacity: var(--o);
@@ -80,8 +90,8 @@
   animation-name: page-5;
 }
 .loader div ul li svg {
-  width: 90px;
-  height: 120px;
+  width: calc(var(--w) / 2.22222222);
+  height: calc(var(--h) / 1.16666667);
   display: block;
 }
 .loader div ul li:first-child {

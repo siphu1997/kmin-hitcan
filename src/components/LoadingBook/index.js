@@ -1,11 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 import './style.css';
 
-function LoadingBook(props) {
+function LoadingBook({ classNames, isFullScreen }) {
   return (
-    <div>
-      <div class="loader">
+    <div
+      className={cn({
+        ctnLoading: true,
+        isFullScreen: !!isFullScreen,
+        [classNames]: !!classNames,
+      })}
+    >
+      <div className="loader">
         <div>
           <ul>
             <li>
@@ -46,6 +53,14 @@ function LoadingBook(props) {
   );
 }
 
-LoadingBook.propTypes = {};
+LoadingBook.defaultProps = {
+  isFullScreen: false,
+  classNames: '',
+};
+
+LoadingBook.propTypes = {
+  isFullScreen: PropTypes.bool,
+  classNames: PropTypes.string,
+};
 
 export default LoadingBook;
