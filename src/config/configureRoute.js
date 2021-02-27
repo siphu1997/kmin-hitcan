@@ -35,6 +35,8 @@ const listRoute = [
     path: '/coming-soon',
     exact: true,
     component: ComingSoon,
+    disableGutters: true,
+    maxWidth: 'xl',
   },
   {
     key: 'login',

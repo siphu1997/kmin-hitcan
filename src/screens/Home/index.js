@@ -6,16 +6,13 @@ import { localize } from 'localization';
 function HomeScreen(props) {
   const { goTo } = useCustomHistory();
   return (
-    <Box>
+    <Box mt={2}>
       <Button
         variant="contained"
         color="primary"
         onClick={() => goTo('homework')}
       >
-        {localize('homescreen.go_to_home_screen')}
-      </Button>
-      <Button variant="contained" color="primary" onClick={() => goTo('login')}>
-        {localize('homescreen.goToLogin')}
+        {localize('homescreen.goToHomeworkScreen')}
       </Button>
     </Box>
   );

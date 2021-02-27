@@ -2,11 +2,14 @@
   "button": {
     "custom": "Tùy chỉnh"
   },
-  "homescreen":{
-    "goToLogin" : "Đến trang đăng nhập",
-    "go_to_home_screen" : "Go to homework screen"
+  "homescreen": {
+    "goToLogin": "Đến trang đăng nhập",
+    "goToHomeworkScreen": "Đến trang bài tập"
   },
-  "homeworkScreen" : {
-    "decription" : "Bài tập {id}"
+  "homeworkScreen": {
+    "decription": "Bài tập {id}"
+  },
+  "loginScreen": {
+    "login": "Đăng nhập"
   }
 }

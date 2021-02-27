@@ -1,6 +1,15 @@
 {
   "button": {
-    "custom": "Custom",
-    "goToLogin" : "Go to login"
+    "custom": "custom"
+  },
+  "homescreen": {
+    "goToLogin": "Go to login screen",
+    "goToHomeworkScreen": "Go to login screen"
+  },
+  "homeworkScreen": {
+    "decription": "Bài tập {id}"
+  },
+  "loginScreen": {
+    "login": "Đăng nhập"
   }
 }

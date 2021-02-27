@@ -1,7 +1,7 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core';
 
-const primary = '#1C523C';
-const secondary = '#EAE7A1';
+const primary = '#032CA6';
+const secondary = '#F25CA2';
 
 const warning = '#E35847';
 const success = '#2DCF58';
@@ -28,12 +28,12 @@ const theme = {
     error: {
       main: error,
     },
+    background: {
+      default: '#040b1f',
+    },
   },
   shape: {
     borderRadius: 5,
-  },
-  background: {
-    main: '#040b1f',
   },
 };
 
