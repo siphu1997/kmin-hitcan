@@ -14,6 +14,9 @@ function HomeScreen(props) {
       >
         Go to homework screen
       </Button>
+      <Button variant="contained" color="primary" onClick={() => goTo('login')}>
+        Go to login
+      </Button>
     </Box>
   );
 }

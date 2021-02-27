@@ -7,10 +7,15 @@ export default function useCustomHistory() {
   function goTo(keyPath, dynamicParam) {
     try {
       if (!keyPath) {
-        throw new Error('Required param keyPath');
+        throw new Error('Required param keyPath.');
       }
+
+      if (!listRouteByKey[keyPath]) {
+        throw new Error('Route not defined.');
+      }
+
       if (dynamicParam && !listRouteByKey[keyPath].pathDynamic) {
-        throw new Error(`Param dynamicParam required pathDynamic key `);
+        throw new Error(`Param dynamicParam required pathDynamic key.`);
       }
 
       const pathname = dynamicParam
