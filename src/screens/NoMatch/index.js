@@ -5,6 +5,7 @@ import { listRouteByKey } from 'configs/configureRoute';
 export default function NoMatch() {
   const history = useHistory();
   function backToHome(e) {
+    e.preventDefault();
     history.push(listRouteByKey['home'].path);
   }
   return (
