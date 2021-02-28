@@ -15,7 +15,7 @@ function LoginScreen(props) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // console.log(process.env);
+    console.log(process.env);
   }, []);
 
   const handleLogin = () => {

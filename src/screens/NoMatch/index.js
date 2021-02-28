@@ -13,9 +13,6 @@ export default function NoMatch() {
       <Box textAlign="center" pt={10}>
         <Grid container spacing={4}>
           <Grid item xs={12}>
-            {/* <Typography variant="h1" color="error">
-              404 - CICD -
-            </Typography> */}
             <Typography variant="h3" color="error">
               PAGE NOT FOUND !
             </Typography>
