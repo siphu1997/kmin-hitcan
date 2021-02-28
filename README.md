@@ -72,3 +72,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### Code convention
 
 https://github.com/airbnb/javascript
+
+### Doc enviroment
+
+https://create-react-app.dev/docs/adding-custom-environment-variables/

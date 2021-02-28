@@ -10,7 +10,7 @@ class Localization {
   localizeData = {};
 
   constructor() {
-    this.language = 'vi';
+    this.language = 'en';
   }
 
   static getInstance() {

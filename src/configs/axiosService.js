@@ -1,9 +1,10 @@
 import axios from 'axios';
-import { ENV_API_ENDPOINT } from '../env/local';
+
+import { API_ENDPOINT } from 'constants/common';
 class AxiosService {
   constructor() {
     const instance = axios.create({
-      baseURL: ENV_API_ENDPOINT,
+      baseURL: API_ENDPOINT,
       timeout: 20000,
       headers: {
         Accept: 'application/json',
