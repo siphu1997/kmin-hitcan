@@ -9,6 +9,7 @@ module.exports = {
         ? ['error', { allow: ['error'] }]
         : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-unused-vars': process.env.NODE_ENV === 'production' ? 'error' : 1,
     'react-hooks/rules-of-hooks': 2,
     'react-hooks/exhaustive-deps': 0,
   },
