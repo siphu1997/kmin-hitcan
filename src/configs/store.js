@@ -1,10 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit';
-import globalReducer from 'screens/globalSlice';
-import homeworkReducer from 'screens/HomeWork/homeworkSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import globalReducer from "screens/globalSlice";
 
 export default configureStore({
   reducer: {
-    globalData: globalReducer,
-    homework: homeworkReducer,
-  },
+    globalData: globalReducer
+  }
 });

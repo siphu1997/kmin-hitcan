@@ -1,12 +1,12 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
-import { Container, Typography, Grid, Box } from '@material-ui/core';
-import { listRouteByKey } from 'configs/configureRoute';
+import React from "react";
+import { useHistory } from "react-router-dom";
+import { Container, Typography, Grid, Box } from "@material-ui/core";
+import { listRouteByKey } from "configs/configureRoute";
 export default function NoMatch() {
   const history = useHistory();
   function backToHome(e) {
     e.preventDefault();
-    history.push(listRouteByKey['home'].path);
+    history.push(listRouteByKey["home"].path);
   }
   return (
     <Container>
@@ -22,10 +22,10 @@ export default function NoMatch() {
               <a
                 onClick={backToHome}
                 href="/"
-                style={{ textDecoration: 'none' }}
+                style={{ textDecoration: "none" }}
               >
                 <Box display="flex" justifyContent="center" alignItems="center">
-                  <span style={{ marginLeft: '8px' }}>Back Home</span>
+                  <span style={{ marginLeft: "8px" }}>Back Home</span>
                 </Box>
               </a>
             </Typography>
