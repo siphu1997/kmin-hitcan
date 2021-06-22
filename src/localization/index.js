@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
-import locales from './locales';
+import locales from "./locales";
 function formatStringByKey(str, key, value) {
-  return str.replace(new RegExp(`\\{${key}\\}`, 'gi'), value);
+  return str.replace(new RegExp(`\\{${key}\\}`, "gi"), value);
 }
 
 class Localization {
@@ -10,7 +10,7 @@ class Localization {
   localizeData = {};
 
   constructor() {
-    this.language = 'en';
+    this.language = "en";
   }
 
   static getInstance() {
@@ -33,7 +33,7 @@ class Localization {
   localize = (localizationKey, params = {}) => {
     const { language } = this;
     const locale = locales[language];
-    const keys = localizationKey.split('.');
+    const keys = localizationKey.split(".");
     let string = locale;
     for (let i = 0; i < keys.length; i++) {
       const key = keys[i];

@@ -1,5 +1,5 @@
-import { useHistory } from 'react-router-dom';
-import { listRouteByKey } from 'configs/configureRoute';
+import { useHistory } from "react-router-dom";
+import { listRouteByKey } from "configs/configureRoute";
 
 export default function useCustomHistory() {
   const history = useHistory();
@@ -7,11 +7,11 @@ export default function useCustomHistory() {
   function goTo(keyPath, dynamicParam) {
     try {
       if (!keyPath) {
-        throw new Error('Required param keyPath.');
+        throw new Error("Required param keyPath.");
       }
 
       if (!listRouteByKey[keyPath]) {
-        throw new Error('Route not defined.');
+        throw new Error("Route not defined.");
       }
 
       if (dynamicParam && !listRouteByKey[keyPath].pathDynamic) {
@@ -23,7 +23,7 @@ export default function useCustomHistory() {
         : listRouteByKey[keyPath].path;
 
       history.push({
-        pathname,
+        pathname
       });
     } catch (error) {
       console.error(error);

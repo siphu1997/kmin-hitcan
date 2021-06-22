@@ -1,8 +1,8 @@
-import useCustomHistory from 'hooks/useCustomHistory';
-import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
-import { listRouteByKey } from 'configs/configureRoute';
+import useCustomHistory from "hooks/useCustomHistory";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
+import { listRouteByKey } from "configs/configureRoute";
 export default function AuthWrapper({ isAuth, ...rest }) {
   const userData = useSelector((state) => state.globalData.userInfo);
   const { goTo } = useCustomHistory();
@@ -10,11 +10,11 @@ export default function AuthWrapper({ isAuth, ...rest }) {
 
   useEffect(() => {
     if (!userData.role && isAuth) {
-      goTo('login');
+      goTo("login");
     }
 
-    if (userData.role && location.pathname === listRouteByKey['login'].path) {
-      goTo('home');
+    if (userData.role && location.pathname === listRouteByKey["login"].path) {
+      goTo("home");
     }
   }, [userData]);
   return <div>{rest.children}</div>;

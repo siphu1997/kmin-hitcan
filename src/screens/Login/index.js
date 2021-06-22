@@ -1,16 +1,16 @@
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 import {
   Box,
   Button,
   Container,
   Grid,
   Paper,
-  Typography,
-} from '@material-ui/core';
-import { useDispatch } from 'react-redux';
-import { setUserInfo } from 'screens/globalSlice';
-import { localize } from 'localization';
+  Typography
+} from "@material-ui/core";
+import { useDispatch } from "react-redux";
+import { setUserInfo } from "screens/globalSlice";
+import { localize } from "localization";
 function LoginScreen(props) {
   const dispatch = useDispatch();
 
@@ -20,11 +20,11 @@ function LoginScreen(props) {
 
   const handleLogin = () => {
     const data = {
-      name: 'HSP',
-      role: 'admin',
+      name: "HSP",
+      role: "admin"
     };
     dispatch(setUserInfo(data));
-    window.localStorage.setItem('isLogin', true);
+    window.localStorage.setItem("isLogin", true);
   };
 
   return (
@@ -38,7 +38,7 @@ function LoginScreen(props) {
             size="large"
             fullWidth
           >
-            <Box my={2}>{localize('loginScreen.login')}</Box>
+            <Box my={2}>{localize("loginScreen.login")}</Box>
           </Button>
         </Box>
       </Grid>

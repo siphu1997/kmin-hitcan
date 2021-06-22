@@ -1,9 +1,9 @@
-import * as moment from 'moment';
-import 'moment/locale/vi';
+import * as moment from "moment";
+import "moment/locale/vi";
 // import Swal from "sweetalert2";
 
 export const replaceStringBy = (str_origin, str_needToReplace, str_by) => {
-  const regex = new RegExp(`${str_needToReplace}`, 'g');
+  const regex = new RegExp(`${str_needToReplace}`, "g");
 
   let result = str_origin.replace(regex, `${str_by}`);
   return result;
@@ -12,32 +12,32 @@ export const replaceStringBy = (str_origin, str_needToReplace, str_by) => {
 export const setCookie = (cname, cvalue, exdays) => {
   var d = new Date();
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
-  var expires = 'expires=' + d.toUTCString();
-  document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+  var expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 };
 
 export const getCookie = (cname) => {
-  var name = cname + '=';
-  var ca = document.cookie.split(';');
+  var name = cname + "=";
+  var ca = document.cookie.split(";");
   for (var i = 0; i < ca.length; i++) {
     var c = ca[i];
-    while (c.charAt(0) === ' ') {
+    while (c.charAt(0) === " ") {
       c = c.substring(1);
     }
     if (c.indexOf(name) === 0) {
       return c.substring(name.length, c.length);
     }
   }
-  return '';
+  return "";
 };
 
 export const currentDate = () => {
   return new Date();
 };
 
-export const FORMAT_DATETIME = 'DD/MM/YYYY HH:mm';
+export const FORMAT_DATETIME = "DD/MM/YYYY HH:mm";
 
-export const FORMAT_DATE = 'DD/MM/YYYY';
+export const FORMAT_DATE = "DD/MM/YYYY";
 
 export const formatRelativeTime = (currentDate) => {
   return currentDate ? moment(currentDate).from(moment()) : null;
@@ -67,18 +67,18 @@ export const convertArrayToObject = (data, key) => {
 };
 
 export const findValueInArrayeBy = (list = [], key, value) => {
-  const curentIndex = list.findIndex((item) => item[key] === value);
-  if (curentIndex < 0) return '';
-  return list[curentIndex];
+  const currentIndex = list.findIndex((item) => item[key] === value);
+  if (currentIndex < 0) return "";
+  return list[currentIndex];
 };
 
 export const formatCurrencyVnd = (value) => {
   return (
     `${value}`
-      .split('')
+      .split("")
       .reverse()
       .reduce((prev, next, index) => {
-        return (index % 3 ? next : next + '.') + prev;
-      }) + 'đ'
+        return (index % 3 ? next : next + ".") + prev;
+      }) + "đ"
   );
 };
